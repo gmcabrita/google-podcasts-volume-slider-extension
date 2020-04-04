@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "name": "Google Podcasts Volume Slider",
+  "short_name": "Google Podcasts Volume Slider",
+  "description": "Allows you to change the volume of the podcast you're listening to.",
+  "version": "1.0.0",
+  "icons": {
+    "34": "icon-34.png",
+    "128": "icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://podcasts.google.com/*"],
+      "js": ["podcasts.bundle.js"],
+      "css": ["podcasts.bundle.css"]
+    }
+  ]
+}

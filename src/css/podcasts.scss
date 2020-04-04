@@ -1,0 +1,4 @@
+@use "@material/theme" with (
+  $secondary: #757575,
+);
+@use '@material/slider/mdc-slider';
