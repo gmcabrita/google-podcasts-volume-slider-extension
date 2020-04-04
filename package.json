@@ -1,10 +1,11 @@
 {
   "scripts": {
     "build": "node utils/build.js",
+    "build:release": "NODE_ENV=production npm run build",
     "start": "node utils/webserver.js",
     "fmt:check": "npx prettier src",
     "fmt": "npx prettier --write src",
-    "dist": "rm -f extension.zip && npm run build && cd build && zip -r ../extension.zip * && cd -"
+    "dist": "rm -f extension.zip && npm run build:release && cd build && zip -r ../extension.zip * && cd -"
   },
   "dependencies": {
     "@material/slider": "^5.1.0"
