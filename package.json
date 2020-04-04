@@ -4,7 +4,7 @@
     "build:release": "NODE_ENV=production npm run build",
     "start": "node utils/webserver.js",
     "fmt:check": "npx prettier src",
-    "fmt": "npx prettier --write src",
+    "fmt": "npx prettier --write src utils webpack.config.js",
     "dist": "rm -f extension.zip && npm run build:release && cd build && zip -r ../extension.zip * && cd -"
   },
   "dependencies": {
