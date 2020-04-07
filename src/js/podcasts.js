@@ -4,9 +4,8 @@ import { MDCSlider } from "@material/slider";
 
 let audioNode = document.querySelector("audio");
 
-audioNode.addEventListener("loadeddata", function processOnce(event) {
-  addVolumeSlider();
-  audioNode.removeEventListener("loadeddata", processOnce);
+audioNode.addEventListener("loadeddata", (event) => addVolumeSlider(), {
+  once: true,
 });
 
 function addVolumeSlider() {
